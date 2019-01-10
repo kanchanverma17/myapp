@@ -1,0 +1,50 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "myapp-20190108192004-authRole",
+			"UnauthRoleArn": "arn:aws:iam::964347224449:role/myapp-20190108192004-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::964347224449:role/myapp-20190108192004-authRole",
+			"Region": "ap-south-1",
+			"DeploymentBucketName": "myapp-20190108192004-deployment",
+			"UnauthRoleName": "myapp-20190108192004-unauthRole",
+			"StackName": "myapp-20190108192004",
+			"StackId": "arn:aws:cloudformation:ap-south-1:964347224449:stack/myapp-20190108192004/4d822d90-134c-11e9-8608-02bc7d16c3bc"
+		}
+	},
+	"api": {
+		"myapp": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY",
+				"GraphQLAPIIdOutput": "sf54gs3r5valnmqypqcy2rm3qe",
+				"GraphQLAPIEndpointOutput": "https://bgnsvtaqmbbhvgrk3zlvcvncju.appsync-api.ap-south-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-fyahfdbxqzfgvhclbtcdsff5zm"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/myapp-20190108192004-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apimyapp"
+			},
+			"lastPushTimeStamp": "2019-01-08T13:59:07.138Z",
+			"lastPushDirHash": "WyP7PeLZAjZW/ZzNPQvc5gDQOqY="
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/myapp-20190108192004-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2019-01-08T13:59:07.140Z",
+			"output": {
+				"S3BucketSecureURL": "https://myapp-20190108192743-hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://myapp-20190108192743-hostingbucket.s3-website.ap-south-1.amazonaws.com",
+				"Region": "ap-south-1",
+				"HostingBucketName": "myapp-20190108192743-hostingbucket"
+			},
+			"lastPushDirHash": "ZWyNeuP0wiAzYQGWSgeOYyzgvN8="
+		}
+	}
+}
